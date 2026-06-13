@@ -33,7 +33,7 @@ public class Ciudadano {
     }
 
     public boolean ciudadanosDiferentes(Ciudadano c2) {
-        return !this.email.equals(c2.email);
+        return !this.equals(c2);
     }
 
     public String getNombre() {
@@ -46,5 +46,13 @@ public class Ciudadano {
 
     public String getPassword() {
         return password;
+    }
+
+    public void delay(int mili) {
+        try {
+            Thread.sleep(mili);
+        } catch (InterruptedException e) {
+            System.out.println("Delay de " + mili + " milisegundos");
+        }
     }
 }
